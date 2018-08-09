@@ -110,6 +110,10 @@ const ProfileSchema = new Schema({
     instagram: {
       type: String
     }
+  },
+  date: {
+    type: date,
+    default: Date.now
   }
 })
 

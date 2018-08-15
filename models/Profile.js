@@ -74,7 +74,7 @@ const ProfileSchema = new Schema({
         type:String,
         required: true
       },
-      fieldofstydy: {
+      fieldofstudy: {
         type:String,
         required: true
       },
@@ -112,7 +112,7 @@ const ProfileSchema = new Schema({
     }
   },
   date: {
-    type: date,
+    type: Date,
     default: Date.now
   }
 })

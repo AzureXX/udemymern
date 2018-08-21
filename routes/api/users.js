@@ -100,7 +100,7 @@ router.post("/login", (req, res) => {
           }
         );
       } else {
-        errors.passoword = "Password is incorrect";
+        errors.password = "Password is incorrect";
         return res.status(400).json(errors);
       }
     });

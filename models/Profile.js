@@ -9,21 +9,21 @@ const ProfileSchema = new Schema({
   },
   handle: {
     type: String,
-    required:true,
+    required: true,
     max: 40
   },
   company: {
-    type:String
+    type: String
   },
   website: {
-    type:String
+    type: String
   },
   location: {
-    type:String
+    type: String
   },
   status: {
     type: String,
-    required:true
+    required: true
   },
   skills: {
     type: [String],
@@ -33,20 +33,20 @@ const ProfileSchema = new Schema({
     type: String
   },
   githubusername: {
-    type: [String]
+    type: String
   },
   experience: [
     {
       title: {
-        type:String,
+        type: String,
         required: true
       },
       company: {
-        type:String,
+        type: String,
         required: true
       },
       location: {
-        type:String,
+        type: String
       },
       from: {
         type: Date,
@@ -57,7 +57,7 @@ const ProfileSchema = new Schema({
       },
       current: {
         type: Boolean,
-        defaul:false
+        defaul: false
       },
       description: {
         type: String
@@ -67,15 +67,15 @@ const ProfileSchema = new Schema({
   education: [
     {
       school: {
-        type:String,
+        type: String,
         required: true
       },
       degree: {
-        type:String,
+        type: String,
         required: true
       },
       fieldofstudy: {
-        type:String,
+        type: String,
         required: true
       },
       from: {
@@ -87,7 +87,7 @@ const ProfileSchema = new Schema({
       },
       current: {
         type: Boolean,
-        defaul:false
+        defaul: false
       },
       description: {
         type: String
@@ -115,7 +115,7 @@ const ProfileSchema = new Schema({
     type: Date,
     default: Date.now
   }
-})
+});
 
-const Profile = mongoose.model("Profile", ProfileSchema)
+const Profile = mongoose.model("Profile", ProfileSchema);
 module.exports = Profile;
